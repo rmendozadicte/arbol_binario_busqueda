@@ -20,8 +20,9 @@ function registrarUsuario(nodo, username){
         nodo.derecho = registrarUsuario(nodo.derecho, username)
     }
     else{
-        console.log(`Aviso: El nombre de usuario: ${username} ya existe`)
+        console.log(`Aviso: El nombre de usuario: ${username} ya existe - Ignorado`)
     }
+    // Retorna un nodo
     return nodo;
 
 }
@@ -50,6 +51,8 @@ arbol = registrarUsuario(arbol,"agarcia");
 arbol = registrarUsuario(arbol,"rmendoza"); 
 arbol = registrarUsuario(arbol,"mvargas");
 arbol = registrarUsuario(arbol,"vlopez");
+// Duplicado
 arbol = registrarUsuario(arbol,"agarcia");
+arbol = registrarUsuario(arbol,"zllanos");
 
 imprimirArbolVisual(arbol);
